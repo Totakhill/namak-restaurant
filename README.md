@@ -51,17 +51,21 @@ This project was created as both:
 
 ```text
 namak-restaurant/
+├── 404.html
 ├── index.html
 ├── README.md
+├── robots.txt
+├── sitemap.xml
 └── assets/
     ├── css/
     │   └── style.css
     ├── js/
     │   └── script.js
     └── images/
+        └── favicon.svg
 ```
 
-The `images` directory will contain final optimized production imagery later.
+The `images` directory currently contains the site favicon and will contain final optimized production imagery later.
 
 ## Running Locally
 
@@ -94,14 +98,16 @@ The main website structure and visual design are complete, and the confirmed mob
 
 The website is currently live on GitHub Pages.
 
+Core production infrastructure is complete, including GitHub Pages deployment, the sitemap, `robots.txt`, favicon, custom 404 page, and basic structured data.
+
 Final production work still includes:
 
 - Verified final restaurant address
 - Verified opening hours
 - Verified restaurant email address
-- Final photography and image optimization
-- Full responsive QA
-- SEO and social sharing refinement where still applicable
+- Final restaurant photography and image optimization
+- Final manual responsive QA
+- Final accessibility QA
 - Live reservation service integration
 - Custom domain configuration if desired
 

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Namak Restaurant</title>
+  <rect width="64" height="64" rx="12" fill="#12100d"/>
+  <path
+    d="M18 46V18l28 28V18"
+    fill="none"
+    stroke="#c9a45c"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="6"
+  />
+</svg>
