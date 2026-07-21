@@ -148,7 +148,7 @@
       <section class="about section" id="about">
         <div class="container">
           <div class="about-grid">
-            <div class="about-visual">
+            <div class="about-visual" data-reveal>
               <div class="about-frame">
                 <picture>
                   <source srcset="assets/images/about/about-interior.webp" type="image/webp">
@@ -171,7 +171,7 @@
               </div>
             </div>
 
-            <div class="about-content">
+            <div class="about-content" data-reveal data-reveal-delay="100">
               <p class="about-eyebrow">Our Story</p>
               <h2 class="about-title">A Celebration of Afghan Flavor and Hospitality</h2>
               <div class="about-copy">
@@ -217,7 +217,7 @@
             </p>
           </header>
 
-          <div class="categories-grid">
+          <div class="categories-grid" data-reveal>
             <article class="category-card">
               <span class="category-number" aria-hidden="true">01</span>
               <h3>Afghan Classics</h3>
@@ -267,7 +267,7 @@
             </p>
           </header>
 
-          <div class="menu-grid">
+          <div class="menu-grid" data-reveal>
             <article class="menu-item">
               <span class="menu-category">Traditional</span>
               <div class="menu-item-header">
@@ -355,7 +355,7 @@
             </p>
           </header>
 
-          <div class="signature-grid">
+          <div class="signature-grid" data-reveal>
             <article class="signature-card signature-card-featured">
               <div class="signature-visual">
                 <picture>
@@ -454,7 +454,7 @@
             </p>
           </header>
 
-          <div class="offers-grid">
+          <div class="offers-grid" data-reveal>
             <article class="offer-card">
               <span class="offer-label">Weekday Special</span>
               <h3 class="offer-title">Afghan Dining Experience</h3>
@@ -503,102 +503,132 @@
           </header>
 
           <div class="experience-grid">
-            <figure class="experience-item experience-item-featured">
+            <figure class="experience-item experience-item-featured" data-reveal>
               <div class="experience-visual">
-                <picture>
-                  <source
-                    srcset="assets/images/gallery/elegant-dining.webp"
-                    type="image/webp"
-                  >
-                  <img
-                    src="assets/images/gallery/elegant-dining.jpg"
-                    alt="Elegant restaurant table set with glassware and warm ambient lighting"
-                    width="1536"
-                    height="1024"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </picture>
+                <a
+                  class="lightbox-trigger"
+                  href="assets/images/gallery/elegant-dining.jpg"
+                  aria-label="Open larger view of Elegant Dining"
+                >
+                  <picture>
+                    <source
+                      srcset="assets/images/gallery/elegant-dining.webp"
+                      type="image/webp"
+                    >
+                    <img
+                      src="assets/images/gallery/elegant-dining.jpg"
+                      alt="Elegant restaurant table set with glassware and warm ambient lighting"
+                      width="1536"
+                      height="1024"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </picture>
+                </a>
               </div>
               <figcaption class="experience-caption">Elegant Dining</figcaption>
             </figure>
 
-            <figure class="experience-item">
+            <figure class="experience-item" data-reveal data-reveal-delay="75">
               <div class="experience-visual">
-                <picture>
-                  <source
-                    srcset="assets/images/gallery/crafted-with-care.webp"
-                    type="image/webp"
-                  >
-                  <img
-                    src="assets/images/gallery/crafted-with-care.jpg"
-                    alt="Chef carefully adding the finishing touches to an Afghan dish"
-                    width="1536"
-                    height="1024"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </picture>
+                <a
+                  class="lightbox-trigger"
+                  href="assets/images/gallery/crafted-with-care.jpg"
+                  aria-label="Open larger view of Crafted with Care"
+                >
+                  <picture>
+                    <source
+                      srcset="assets/images/gallery/crafted-with-care.webp"
+                      type="image/webp"
+                    >
+                    <img
+                      src="assets/images/gallery/crafted-with-care.jpg"
+                      alt="Chef carefully adding the finishing touches to an Afghan dish"
+                      width="1536"
+                      height="1024"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </picture>
+                </a>
               </div>
               <figcaption class="experience-caption">Crafted with Care</figcaption>
             </figure>
 
-            <figure class="experience-item">
+            <figure class="experience-item" data-reveal data-reveal-delay="150">
               <div class="experience-visual">
-                <picture>
-                  <source
-                    srcset="assets/images/gallery/warm-hospitality.webp"
-                    type="image/webp"
-                  >
-                  <img
-                    src="assets/images/gallery/warm-hospitality.jpg"
-                    alt="Warm restaurant service presenting Afghan food to guests"
-                    width="1536"
-                    height="1024"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </picture>
+                <a
+                  class="lightbox-trigger"
+                  href="assets/images/gallery/warm-hospitality.jpg"
+                  aria-label="Open larger view of Warm Hospitality"
+                >
+                  <picture>
+                    <source
+                      srcset="assets/images/gallery/warm-hospitality.webp"
+                      type="image/webp"
+                    >
+                    <img
+                      src="assets/images/gallery/warm-hospitality.jpg"
+                      alt="Warm restaurant service presenting Afghan food to guests"
+                      width="1536"
+                      height="1024"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </picture>
+                </a>
               </div>
               <figcaption class="experience-caption">Warm Hospitality</figcaption>
             </figure>
 
-            <figure class="experience-item">
+            <figure class="experience-item" data-reveal data-reveal-delay="225">
               <div class="experience-visual">
-                <picture>
-                  <source
-                    srcset="assets/images/gallery/moments-worth-sharing.webp"
-                    type="image/webp"
-                  >
-                  <img
-                    src="assets/images/gallery/moments-worth-sharing.jpg"
-                    alt="Guests sharing beautifully presented Afghan dishes around a warm table"
-                    width="1536"
-                    height="1024"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </picture>
+                <a
+                  class="lightbox-trigger"
+                  href="assets/images/gallery/moments-worth-sharing.jpg"
+                  aria-label="Open larger view of Moments Worth Sharing"
+                >
+                  <picture>
+                    <source
+                      srcset="assets/images/gallery/moments-worth-sharing.webp"
+                      type="image/webp"
+                    >
+                    <img
+                      src="assets/images/gallery/moments-worth-sharing.jpg"
+                      alt="Guests sharing beautifully presented Afghan dishes around a warm table"
+                      width="1536"
+                      height="1024"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </picture>
+                </a>
               </div>
               <figcaption class="experience-caption">Moments Worth Sharing</figcaption>
             </figure>
 
-            <figure class="experience-item">
+            <figure class="experience-item" data-reveal data-reveal-delay="300">
               <div class="experience-visual">
-                <picture>
-                  <source
-                    srcset="assets/images/gallery/afghan-tradition-refined.webp"
-                    type="image/webp"
-                  >
-                  <img
-                    src="assets/images/gallery/afghan-tradition-refined.jpg"
-                    alt="Traditional Afghan cuisine presented with refined tableware and styling"
-                    width="1536"
-                    height="1024"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </picture>
+                <a
+                  class="lightbox-trigger"
+                  href="assets/images/gallery/afghan-tradition-refined.jpg"
+                  aria-label="Open larger view of Afghan Tradition, Refined"
+                >
+                  <picture>
+                    <source
+                      srcset="assets/images/gallery/afghan-tradition-refined.webp"
+                      type="image/webp"
+                    >
+                    <img
+                      src="assets/images/gallery/afghan-tradition-refined.jpg"
+                      alt="Traditional Afghan cuisine presented with refined tableware and styling"
+                      width="1536"
+                      height="1024"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </picture>
+                </a>
               </div>
               <figcaption class="experience-caption">Afghan Tradition, Refined</figcaption>
             </figure>
@@ -609,7 +639,7 @@
       <section class="story section" id="story">
         <div class="container">
           <div class="story-grid">
-            <div class="story-visual">
+            <div class="story-visual" data-reveal>
               <div class="story-frame">
                 <picture>
                   <source srcset="assets/images/story/namak-story.webp" type="image/webp">
@@ -627,7 +657,7 @@
               <div class="story-accent"></div>
             </div>
 
-            <div class="story-content">
+            <div class="story-content" data-reveal data-reveal-delay="100">
               <p class="section-eyebrow">Behind the Experience</p>
               <h2 class="section-title">Rooted in Tradition, Guided by Craft</h2>
               <div class="story-copy">
@@ -663,7 +693,7 @@
             </p>
           </header>
 
-          <div class="testimonials-grid">
+          <div class="testimonials-grid" data-reveal>
             <article class="testimonial-card">
               <blockquote class="testimonial-quote">
                 <p>
@@ -709,7 +739,7 @@
       <section class="reservation section" id="reservation">
         <div class="container">
           <div class="reservation-grid">
-            <div class="reservation-form-wrapper">
+            <div class="reservation-form-wrapper" data-reveal>
               <header class="reservation-header">
                 <p class="section-eyebrow">Reserve Your Table</p>
                 <h2 class="section-title">Plan Your Next Namak Experience</h2>
@@ -802,10 +832,17 @@
                   Online reservation requests will be activated when the booking service is
                   connected.
                 </p>
+                <div class="form-status" role="status" aria-live="polite"></div>
               </form>
             </div>
 
-            <aside class="contact-panel" id="contact" aria-labelledby="contact-title">
+            <aside
+              class="contact-panel"
+              id="contact"
+              aria-labelledby="contact-title"
+              data-reveal
+              data-reveal-delay="100"
+            >
               <h3 id="contact-title">Visit Namak</h3>
               <!-- Final verified restaurant address, opening hours, and email address must replace the current values before launch. -->
               <address>
@@ -854,7 +891,7 @@
       <section class="location section" id="location">
         <div class="container">
           <div class="location-grid">
-            <div class="location-content">
+            <div class="location-content" data-reveal>
               <header class="location-header">
                 <p class="section-eyebrow">Find Us</p>
                 <h2 class="section-title">Visit Namak in Kabul</h2>
@@ -894,6 +931,8 @@
               class="location-map"
               role="img"
               aria-label="Map preview showing Namak Restaurant in Kabul, Afghanistan"
+              data-reveal
+              data-reveal-delay="100"
             >
               <div class="location-map-inner">
                 <div class="location-pin"></div>
@@ -966,5 +1005,40 @@
         </div>
       </div>
     </footer>
+
+    <dialog class="lightbox" id="gallery-lightbox" aria-labelledby="lightbox-caption">
+      <div class="lightbox-inner">
+        <button class="lightbox-close" type="button" aria-label="Close image viewer">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <picture class="lightbox-media">
+          <source
+            id="lightbox-source"
+            srcset="assets/images/gallery/elegant-dining.webp"
+            type="image/webp"
+          >
+          <img
+            id="lightbox-image"
+            src="assets/images/gallery/elegant-dining.jpg"
+            alt=""
+            width="1536"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+          >
+        </picture>
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+      </div>
+    </dialog>
+
+    <button
+      class="back-to-top"
+      type="button"
+      aria-label="Back to top"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      <span aria-hidden="true">&uarr;</span>
+    </button>
   </body>
 </html>
