@@ -36,6 +36,12 @@ This project was created as both:
 - WhatsApp contact support
 - Professional footer
 - Accessibility features
+- English version
+- Dari version
+- Pashto version
+- Right-to-left support for Dari and Pashto
+- Localized SEO metadata and `hreflang` links
+- Multilingual XML sitemap
 - GitHub Pages compatibility
 
 ## Technologies Used
@@ -53,6 +59,10 @@ This project was created as both:
 namak-restaurant/
 ├── 404.html
 ├── index.html
+├── fa/
+│   └── index.html
+├── ps/
+│   └── index.html
 ├── README.md
 ├── robots.txt
 ├── sitemap.xml
@@ -108,14 +118,13 @@ Core production infrastructure is complete, including GitHub Pages deployment, t
 
 Final production work still includes:
 
-- Verified final restaurant street address
+- Verified restaurant street address
 - Verified opening hours
 - Verified restaurant email address
-- Final manual responsive QA
-- Final accessibility QA
-- Live reservation service integration
-- Custom domain configuration if desired
-- Replacement of generated imagery with authentic Namak photography when available
+- Live reservation backend
+- Authentic final Namak photography
+- Final real-device responsive and accessibility QA
+- Optional custom domain configuration
 
 ## Learning Goals
 

@@ -1,6 +1,49 @@
 (() => {
   "use strict";
 
+  const UI_COPY = {
+    en: {
+      openNavigation: "Open navigation menu",
+      closeNavigation: "Close navigation menu",
+      reservationUnavailable:
+        "Online booking is not active yet. Please call or contact us on WhatsApp to complete your reservation.",
+      callRestaurant: "Call Namak",
+      whatsAppRestaurant: "WhatsApp Us",
+    },
+    fa: {
+      openNavigation: "باز کردن فهرست پیمایش",
+      closeNavigation: "بستن فهرست پیمایش",
+      reservationUnavailable:
+        "رزرو آنلاین هنوز فعال نیست. لطفاً برای تکمیل رزرو خود تیلفون کنید یا از طریق واتساپ با ما تماس بگیرید.",
+      callRestaurant: "تماس با Namak",
+      whatsAppRestaurant: "پیام در واتساپ",
+    },
+    ps: {
+      openNavigation: "د لارښود غورنۍ پرانیزئ",
+      closeNavigation: "د لارښود غورنۍ وتړئ",
+      reservationUnavailable:
+        "انلاین خوندي کول لا فعال نه دي. د خپل مېز د خوندي کولو لپاره مهرباني وکړئ ټیلیفون وکړئ یا په واټساپ کې اړیکه ونیسئ.",
+      callRestaurant: "Namak ته زنګ ووهئ",
+      whatsAppRestaurant: "په واټساپ اړیکه",
+    },
+  };
+
+  const getCurrentLocale = () => {
+    const language = document.documentElement.lang.toLowerCase();
+
+    if (language.startsWith("fa")) {
+      return "fa";
+    }
+
+    if (language.startsWith("ps")) {
+      return "ps";
+    }
+
+    return "en";
+  };
+
+  const getCopy = (key) => UI_COPY[getCurrentLocale()][key] || UI_COPY.en[key];
+
   const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   const scrollCallbacks = new Set();
   let scrollFramePending = false;
@@ -43,7 +86,7 @@
       navToggle.setAttribute("aria-expanded", String(isOpen));
       navToggle.setAttribute(
         "aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu"
+        isOpen ? getCopy("closeNavigation") : getCopy("openNavigation")
       );
     };
 
@@ -289,19 +332,18 @@
       const whatsAppLink = document.createElement("a");
 
       message.className = "form-status-message";
-      message.textContent =
-        "Online booking is not active yet. Please call or contact us on WhatsApp to complete your reservation.";
+      message.textContent = getCopy("reservationUnavailable");
 
       actions.className = "form-status-actions";
       phoneLink.className = "form-status-action";
       phoneLink.href = "tel:+93765083224";
-      phoneLink.textContent = "Call Namak";
+      phoneLink.textContent = getCopy("callRestaurant");
 
       whatsAppLink.className = "form-status-action";
       whatsAppLink.href = "https://wa.me/93765083224";
       whatsAppLink.target = "_blank";
       whatsAppLink.rel = "noopener noreferrer";
-      whatsAppLink.textContent = "WhatsApp Us";
+      whatsAppLink.textContent = getCopy("whatsAppRestaurant");
 
       actions.append(phoneLink, whatsAppLink);
       formStatus.replaceChildren(message, actions);

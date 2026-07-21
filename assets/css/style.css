@@ -36,7 +36,7 @@ textarea {
   --color-white: #ffffff;
   --container-max-width: 1200px;
   --section-spacing: clamp(4rem, 8vw, 7rem);
-  --anchor-offset: 6.5rem;
+  --anchor-offset: 8.5rem;
   --transition: 0.3s ease;
 }
 
@@ -134,7 +134,7 @@ a:focus-visible {
   position: fixed;
   z-index: 10000;
   top: 0.75rem;
-  left: 1rem;
+  inset-inline-start: 1rem;
   padding: 0.75rem 1rem;
   background-color: var(--color-gold);
   color: var(--color-primary-dark);
@@ -165,6 +165,44 @@ a:focus-visible {
   background-color: var(--color-primary-dark);
 }
 
+.language-bar {
+  border-bottom: 1px solid color-mix(in srgb, var(--color-gold) 18%, transparent);
+  background-color: var(--color-secondary-dark);
+}
+
+.language-switcher {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+}
+
+.language-switcher a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  padding-inline: 0.7rem;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.language-switcher a:hover,
+.language-switcher a:focus-visible {
+  border-color: color-mix(in srgb, var(--color-gold) 55%, transparent);
+  color: var(--color-gold);
+}
+
+.language-switcher a[aria-current="page"] {
+  border-color: var(--color-gold);
+  background-color: var(--color-gold);
+  color: var(--color-primary-dark);
+}
+
 .navbar {
   position: relative;
   display: flex;
@@ -193,7 +231,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   gap: clamp(1rem, 2.2vw, 2.5rem);
-  margin-left: auto;
+  margin-inline-start: auto;
   list-style: none;
 }
 
@@ -280,22 +318,21 @@ a:focus-visible {
 
   .nav-toggle {
     display: block;
-    margin-left: auto;
+    margin-inline-start: auto;
   }
 
   .nav-list {
     position: absolute;
     top: 100%;
-    right: 0;
-    left: 0;
+    inset-inline: 0;
     display: none;
     width: 100%;
-    max-height: calc(100svh - 4.5rem);
+    max-height: calc(100svh - 7.25rem);
     overflow-y: auto;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    margin-left: 0;
+    margin-inline-start: 0;
     border-top: 1px solid var(--color-secondary-dark);
     border-bottom: 1px solid var(--color-secondary-dark);
     padding: 0.75rem 1rem;
@@ -347,7 +384,7 @@ a:focus-visible {
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: calc(100svh - 5rem);
+  min-height: calc(100svh - 7.75rem);
   overflow: hidden;
   padding-block: clamp(4rem, 8vw, 7rem);
   background:
@@ -724,8 +761,8 @@ a:focus-visible {
 }
 
 .about-values li {
-  border-left: 1px solid var(--color-gold);
-  padding-left: 1rem;
+  border-inline-start: 1px solid var(--color-gold);
+  padding-inline-start: 1rem;
 }
 
 .about-values h3 {
@@ -1288,8 +1325,8 @@ a:focus-visible {
 
 .offer-highlight {
   margin-top: 1.75rem;
-  border-left: 1px solid var(--color-gold);
-  padding-left: 0.85rem;
+  border-inline-start: 1px solid var(--color-gold);
+  padding-inline-start: 0.85rem;
   color: var(--color-text-light);
   font-size: 0.78rem;
   font-weight: 600;
@@ -1530,8 +1567,9 @@ a:focus-visible {
 .story-quote {
   max-width: 38rem;
   margin-top: 2rem;
-  border-left: 2px solid var(--color-gold);
-  padding: 0.25rem 0 0.25rem 1.5rem;
+  border-inline-start: 2px solid var(--color-gold);
+  padding-block: 0.25rem;
+  padding-inline-start: 1.5rem;
 }
 
 .story-quote p {
@@ -1991,10 +2029,10 @@ a.contact-value:focus-visible {
   position: absolute;
   z-index: 2;
   bottom: 1.5rem;
-  left: 1.5rem;
+  inset-inline-start: 1.5rem;
   display: flex;
   flex-direction: column;
-  border-left: 2px solid var(--color-gold);
+  border-inline-start: 2px solid var(--color-gold);
   padding: 0.85rem 1rem;
   background-color: color-mix(in srgb, var(--color-primary-dark) 88%, transparent);
 }
@@ -2159,6 +2197,91 @@ a.contact-value:focus-visible {
   }
 }
 
+/* ========================================
+   Multilingual and RTL Support
+======================================== */
+
+html[dir="rtl"] body {
+  font-family: Tahoma, Arial, "Segoe UI", sans-serif;
+  line-height: 1.75;
+}
+
+html[dir="rtl"] :is(h1, h2, h3, h4, h5, h6) {
+  line-height: 1.35;
+}
+
+html[dir="rtl"] :is(
+    .nav-list a,
+    .header-cta,
+    .hero-eyebrow,
+    .section-eyebrow,
+    .btn,
+    .text-link,
+    .category-link,
+    .offer-link,
+    .menu-category,
+    .signature-category,
+    .offer-label,
+    .contact-label,
+    .location-label,
+    .footer-column h2,
+    .language-switcher a
+  ) {
+  letter-spacing: normal;
+}
+
+html[dir="rtl"] :is(input, select, textarea) {
+  text-align: start;
+}
+
+:is(input[type="email"], input[type="tel"], a[href^="tel:"], a[href^="mailto:"]) {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+html[dir="rtl"] :is(.menu-price, .signature-price, .category-number) {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .nav-list a::after {
+  transform-origin: right;
+}
+
+html[dir="rtl"] :is(.text-link, .category-link, .offer-link)::after {
+  content: "\2190";
+}
+
+html[dir="rtl"] :is(.text-link, .category-link, .offer-link):is(:hover, :focus-visible)::after {
+  transform: translateX(-0.25rem);
+}
+
+html[dir="rtl"] .testimonial-card::before {
+  right: auto;
+  left: 1.25rem;
+}
+
+html[dir="rtl"] .category-number {
+  right: auto;
+  left: 1.25rem;
+}
+
+html[dir="rtl"] .category-card::before {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .location-map-note {
+  right: auto;
+  left: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  html[dir="rtl"] .nav-list a::after {
+    transform-origin: right;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -2319,9 +2442,9 @@ a.contact-value:focus-visible {
 
 .nav-list a::after {
   position: absolute;
-  right: 0;
+  inset-inline-end: 0;
   bottom: -0.45rem;
-  left: 0;
+  inset-inline-start: 0;
   height: 1px;
   background-color: var(--color-gold);
   content: "";
@@ -2412,7 +2535,7 @@ a.contact-value:focus-visible {
   position: absolute;
   z-index: 1;
   top: 0.6rem;
-  right: 0.6rem;
+  inset-inline-end: 0.6rem;
   display: grid;
   width: 2.75rem;
   height: 2.75rem;
@@ -2468,7 +2591,7 @@ a.contact-value:focus-visible {
 .back-to-top {
   position: fixed;
   z-index: 900;
-  right: clamp(1rem, 3vw, 2.25rem);
+  inset-inline-end: clamp(1rem, 3vw, 2.25rem);
   bottom: clamp(1rem, 3vw, 2.25rem);
   display: grid;
   width: 3rem;
@@ -2519,7 +2642,7 @@ a.contact-value:focus-visible {
 .form-status:not(:empty) {
   margin-top: 1.25rem;
   padding: 1rem 1.1rem;
-  border-left: 3px solid var(--color-gold);
+  border-inline-start: 3px solid var(--color-gold);
   background-color: color-mix(
     in srgb,
     var(--color-gold) 8%,

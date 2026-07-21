@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
   <url>
     <loc>https://totakhill.github.io/namak-restaurant/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://totakhill.github.io/namak-restaurant/"/>
+    <xhtml:link rel="alternate" hreflang="fa-AF" href="https://totakhill.github.io/namak-restaurant/fa/"/>
+    <xhtml:link rel="alternate" hreflang="ps-AF" href="https://totakhill.github.io/namak-restaurant/ps/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://totakhill.github.io/namak-restaurant/"/>
+  </url>
+  <url>
+    <loc>https://totakhill.github.io/namak-restaurant/fa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://totakhill.github.io/namak-restaurant/"/>
+    <xhtml:link rel="alternate" hreflang="fa-AF" href="https://totakhill.github.io/namak-restaurant/fa/"/>
+    <xhtml:link rel="alternate" hreflang="ps-AF" href="https://totakhill.github.io/namak-restaurant/ps/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://totakhill.github.io/namak-restaurant/"/>
+  </url>
+  <url>
+    <loc>https://totakhill.github.io/namak-restaurant/ps/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://totakhill.github.io/namak-restaurant/"/>
+    <xhtml:link rel="alternate" hreflang="fa-AF" href="https://totakhill.github.io/namak-restaurant/fa/"/>
+    <xhtml:link rel="alternate" hreflang="ps-AF" href="https://totakhill.github.io/namak-restaurant/ps/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://totakhill.github.io/namak-restaurant/"/>
   </url>
 </urlset>
