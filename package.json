@@ -1,0 +1,27 @@
+{
+  "name": "namak-restaurant",
+  "version": "1.0.0",
+  "description": "Namak Restaurant multilingual website and mobile application",
+  "scripts": {
+    "build:mobile": "node scripts/build-mobile.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Totakhill/namak-restaurant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Totakhill/namak-restaurant/issues"
+  },
+  "homepage": "https://github.com/Totakhill/namak-restaurant#readme",
+  "dependencies": {
+    "@capacitor/android": "^8.4.2",
+    "@capacitor/core": "^8.4.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.4.2"
+  }
+}
