@@ -285,3 +285,325 @@ a:focus-visible {
     display: none;
   }
 }
+
+/* ========================================
+   Hero
+======================================== */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: calc(100svh - 5rem);
+  overflow: hidden;
+  padding-block: clamp(4rem, 8vw, 7rem);
+  background:
+    radial-gradient(
+      circle at 78% 35%,
+      color-mix(in srgb, var(--color-gold) 12%, transparent),
+      transparent 30%
+    ),
+    linear-gradient(135deg, var(--color-primary-dark) 15%, var(--color-secondary-dark) 100%);
+}
+
+.hero::before {
+  position: absolute;
+  z-index: -1;
+  top: -12rem;
+  left: -10rem;
+  width: 30rem;
+  height: 30rem;
+  border: 1px solid color-mix(in srgb, var(--color-gold) 12%, transparent);
+  border-radius: 50%;
+  content: "";
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(20rem, 0.92fr);
+  align-items: center;
+  gap: clamp(3rem, 7vw, 7rem);
+}
+
+.hero-content {
+  max-width: 43rem;
+}
+
+.hero-eyebrow {
+  margin-bottom: 1rem;
+  color: var(--color-gold);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  max-width: 13ch;
+  font-size: clamp(2.75rem, 6vw, 5.75rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.hero-description {
+  max-width: 39rem;
+  margin-top: 1.5rem;
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  border: 1px solid transparent;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-align: center;
+  transition:
+    background-color var(--transition),
+    border-color var(--transition),
+    color var(--transition),
+    transform var(--transition);
+}
+
+.btn-primary {
+  border-color: var(--color-gold);
+  background-color: var(--color-gold);
+  color: var(--color-primary-dark);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  border-color: var(--color-text-light);
+  background-color: var(--color-text-light);
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border-color: color-mix(in srgb, var(--color-text-muted) 55%, transparent);
+  background-color: transparent;
+  color: var(--color-text-light);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+.hero-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-top: 2.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  list-style: none;
+}
+
+.hero-details li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.hero-details li::before {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background-color: var(--color-gold);
+  content: "";
+}
+
+.hero-visual {
+  position: relative;
+  display: grid;
+  min-height: 34rem;
+  place-items: center;
+}
+
+.hero-glow {
+  position: absolute;
+  width: min(31rem, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--color-gold) 15%, transparent),
+    transparent 68%
+  );
+  filter: blur(10px);
+}
+
+.hero-plate {
+  position: relative;
+  display: grid;
+  width: min(27rem, 88%);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--color-gold) 55%, transparent);
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--color-secondary-dark), var(--color-primary-dark));
+  box-shadow:
+    inset 0 0 0 1.25rem var(--color-secondary-dark),
+    0 2rem 4rem color-mix(in srgb, var(--color-primary-dark) 70%, transparent);
+}
+
+.hero-plate::before,
+.hero-plate::after {
+  position: absolute;
+  border-radius: 50%;
+  content: "";
+}
+
+.hero-plate::before {
+  width: 68%;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--color-gold) 25%, transparent);
+}
+
+.hero-plate::after {
+  width: 42%;
+  aspect-ratio: 1;
+  background: radial-gradient(circle at 35% 30%, var(--color-gold), var(--color-secondary-dark) 68%);
+  opacity: 0.45;
+}
+
+.hero-plate-ring {
+  position: absolute;
+  width: 82%;
+  aspect-ratio: 1;
+  border: 1px dashed color-mix(in srgb, var(--color-gold) 28%, transparent);
+  border-radius: 50%;
+  transform: rotate(-18deg);
+}
+
+.hero-plate-center {
+  z-index: 1;
+  width: 18%;
+  aspect-ratio: 1;
+  border: 1px solid var(--color-gold);
+  border-radius: 50%;
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 0 2rem color-mix(in srgb, var(--color-gold) 25%, transparent);
+}
+
+.hero-accent {
+  position: absolute;
+  border: 1px solid color-mix(in srgb, var(--color-gold) 65%, transparent);
+  border-radius: 50%;
+  background-color: var(--color-secondary-dark);
+}
+
+.hero-accent-one {
+  top: 8%;
+  right: 5%;
+  width: 4rem;
+  aspect-ratio: 1;
+}
+
+.hero-accent-two {
+  bottom: 9%;
+  left: 3%;
+  width: 2.25rem;
+  aspect-ratio: 1;
+}
+
+@media (min-width: 1100px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.8fr);
+    gap: clamp(3rem, 5vw, 5rem);
+  }
+
+  .hero-content {
+    max-width: 48rem;
+  }
+
+  .hero-title {
+    max-width: 17ch;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding-block: clamp(3.5rem, 9vw, 5rem);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-content {
+    max-width: 46rem;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .hero-title,
+  .hero-description {
+    margin-inline: auto;
+  }
+
+  .hero-actions,
+  .hero-details {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    width: min(100%, 27rem);
+    min-height: 25rem;
+    margin-inline: auto;
+  }
+
+  .hero-accent-one {
+    right: 2%;
+  }
+
+  .hero-accent-two {
+    left: 2%;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-title {
+    font-size: clamp(2.5rem, 13vw, 3.5rem);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-visual {
+    min-height: 19rem;
+  }
+
+  .hero-plate {
+    width: min(19rem, 88%);
+  }
+}
