@@ -98,18 +98,18 @@ The main website structure and visual design are complete, and the confirmed mob
 
 The website is currently live on GitHub Pages.
 
-Core production infrastructure is complete, including GitHub Pages deployment, the sitemap, `robots.txt`, favicon, custom 404 page, and basic structured data.
+Core production infrastructure is complete, including GitHub Pages deployment, the sitemap, `robots.txt`, favicon, custom 404 page, basic structured data, social-sharing metadata, initial restaurant photography integration, responsive image integration, and WebP image optimization with JPG fallbacks.
 
 Final production work still includes:
 
-- Verified final restaurant address
+- Verified final restaurant street address
 - Verified opening hours
 - Verified restaurant email address
-- Final restaurant photography and image optimization
 - Final manual responsive QA
 - Final accessibility QA
 - Live reservation service integration
 - Custom domain configuration if desired
+- Replacement of generated imagery with authentic Namak photography when available
 
 ## Learning Goals
 

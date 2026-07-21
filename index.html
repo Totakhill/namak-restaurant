@@ -20,9 +20,38 @@
       property="og:description"
       content="Experience authentic Afghan flavors, warm hospitality, and an elegant dining atmosphere at Namak Restaurant."
     >
+    <meta
+      property="og:image"
+      content="https://totakhill.github.io/namak-restaurant/assets/images/social/namak-social-preview.jpg"
+    >
+    <meta
+      property="og:image:alt"
+      content="Namak Restaurant premium Afghan dining experience"
+    >
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta
+      name="twitter:title"
+      content="Namak Restaurant | Authentic Dining Experience"
+    >
+    <meta
+      name="twitter:description"
+      content="Experience authentic Afghan flavors, warm hospitality, and an elegant dining atmosphere at Namak Restaurant."
+    >
+    <meta
+      name="twitter:image"
+      content="https://totakhill.github.io/namak-restaurant/assets/images/social/namak-social-preview.jpg"
+    >
     <title>Namak Restaurant | Authentic Dining Experience</title>
     <link rel="canonical" href="https://totakhill.github.io/namak-restaurant/">
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/hero/hero-afghan-dining.webp"
+      type="image/webp"
+    >
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="application/ld+json">
       {
@@ -98,13 +127,19 @@
             </div>
 
             <div class="hero-visual">
-              <img
-                src="assets/images/hero/hero-afghan-dining.jpg"
-                alt="Elegant Afghan fine-dining table presentation at Namak Restaurant"
-                width="1727"
-                height="911"
-                fetchpriority="high"
-              >
+              <picture>
+                <source
+                  srcset="assets/images/hero/hero-afghan-dining.webp"
+                  type="image/webp"
+                >
+                <img
+                  src="assets/images/hero/hero-afghan-dining.jpg"
+                  alt="Elegant Afghan fine-dining table presentation at Namak Restaurant"
+                  width="1727"
+                  height="911"
+                  fetchpriority="high"
+                >
+              </picture>
             </div>
           </div>
         </div>
@@ -115,15 +150,18 @@
           <div class="about-grid">
             <div class="about-visual">
               <div class="about-frame">
-                <img
-                  class="about-image"
-                  src="assets/images/about/about-interior.jpg"
-                  alt="Warm and elegant interior dining atmosphere at Namak Restaurant"
-                  width="1024"
-                  height="1536"
-                  loading="lazy"
-                  decoding="async"
-                >
+                <picture>
+                  <source srcset="assets/images/about/about-interior.webp" type="image/webp">
+                  <img
+                    class="about-image"
+                    src="assets/images/about/about-interior.jpg"
+                    alt="Warm and elegant interior dining atmosphere at Namak Restaurant"
+                    width="1024"
+                    height="1536"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </picture>
               </div>
               <div class="about-accent about-accent-top"></div>
               <div class="about-accent about-accent-bottom"></div>
@@ -320,14 +358,20 @@
           <div class="signature-grid">
             <article class="signature-card signature-card-featured">
               <div class="signature-visual">
-                <img
-                  src="assets/images/dishes/royal-kabuli-pulao.jpg"
-                  alt="Royal Kabuli Pulao with fragrant rice, tender lamb, carrots, and raisins"
-                  width="1536"
-                  height="1024"
-                  loading="lazy"
-                  decoding="async"
-                >
+                <picture>
+                  <source
+                    srcset="assets/images/dishes/royal-kabuli-pulao.webp"
+                    type="image/webp"
+                  >
+                  <img
+                    src="assets/images/dishes/royal-kabuli-pulao.jpg"
+                    alt="Royal Kabuli Pulao with fragrant rice, tender lamb, carrots, and raisins"
+                    width="1536"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </picture>
               </div>
               <div class="signature-content">
                 <span class="signature-category">Signature</span>
@@ -342,14 +386,20 @@
 
             <article class="signature-card">
               <div class="signature-visual">
-                <img
-                  src="assets/images/dishes/namak-mixed-grill.jpg"
-                  alt="Namak mixed grill platter with flame-grilled kebabs and accompaniments"
-                  width="1536"
-                  height="1024"
-                  loading="lazy"
-                  decoding="async"
-                >
+                <picture>
+                  <source
+                    srcset="assets/images/dishes/namak-mixed-grill.webp"
+                    type="image/webp"
+                  >
+                  <img
+                    src="assets/images/dishes/namak-mixed-grill.jpg"
+                    alt="Namak mixed grill platter with flame-grilled kebabs and accompaniments"
+                    width="1536"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </picture>
               </div>
               <div class="signature-content">
                 <span class="signature-category">From the Grill</span>
@@ -364,14 +414,20 @@
 
             <article class="signature-card">
               <div class="signature-visual">
-                <img
-                  src="assets/images/dishes/afghan-lamb-special.jpg"
-                  alt="Afghan lamb special with aromatic garnishes and elegant presentation"
-                  width="1536"
-                  height="1024"
-                  loading="lazy"
-                  decoding="async"
-                >
+                <picture>
+                  <source
+                    srcset="assets/images/dishes/afghan-lamb-special.webp"
+                    type="image/webp"
+                  >
+                  <img
+                    src="assets/images/dishes/afghan-lamb-special.jpg"
+                    alt="Afghan lamb special with aromatic garnishes and elegant presentation"
+                    width="1536"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </picture>
               </div>
               <div class="signature-content">
                 <span class="signature-category">Chef's Favorite</span>
@@ -449,70 +505,100 @@
           <div class="experience-grid">
             <figure class="experience-item experience-item-featured">
               <div class="experience-visual">
-                <img
-                  src="assets/images/gallery/elegant-dining.jpg"
-                  alt="Elegant restaurant table set with glassware and warm ambient lighting"
-                  width="1536"
-                  height="1024"
-                  loading="lazy"
-                  decoding="async"
-                >
+                <picture>
+                  <source
+                    srcset="assets/images/gallery/elegant-dining.webp"
+                    type="image/webp"
+                  >
+                  <img
+                    src="assets/images/gallery/elegant-dining.jpg"
+                    alt="Elegant restaurant table set with glassware and warm ambient lighting"
+                    width="1536"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </picture>
               </div>
               <figcaption class="experience-caption">Elegant Dining</figcaption>
             </figure>
 
             <figure class="experience-item">
               <div class="experience-visual">
-                <img
-                  src="assets/images/gallery/crafted-with-care.jpg"
-                  alt="Chef carefully adding the finishing touches to an Afghan dish"
-                  width="1536"
-                  height="1024"
-                  loading="lazy"
-                  decoding="async"
-                >
+                <picture>
+                  <source
+                    srcset="assets/images/gallery/crafted-with-care.webp"
+                    type="image/webp"
+                  >
+                  <img
+                    src="assets/images/gallery/crafted-with-care.jpg"
+                    alt="Chef carefully adding the finishing touches to an Afghan dish"
+                    width="1536"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </picture>
               </div>
               <figcaption class="experience-caption">Crafted with Care</figcaption>
             </figure>
 
             <figure class="experience-item">
               <div class="experience-visual">
-                <img
-                  src="assets/images/gallery/warm-hospitality.jpg"
-                  alt="Warm restaurant service presenting Afghan food to guests"
-                  width="1536"
-                  height="1024"
-                  loading="lazy"
-                  decoding="async"
-                >
+                <picture>
+                  <source
+                    srcset="assets/images/gallery/warm-hospitality.webp"
+                    type="image/webp"
+                  >
+                  <img
+                    src="assets/images/gallery/warm-hospitality.jpg"
+                    alt="Warm restaurant service presenting Afghan food to guests"
+                    width="1536"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </picture>
               </div>
               <figcaption class="experience-caption">Warm Hospitality</figcaption>
             </figure>
 
             <figure class="experience-item">
               <div class="experience-visual">
-                <img
-                  src="assets/images/gallery/moments-worth-sharing.jpg"
-                  alt="Guests sharing beautifully presented Afghan dishes around a warm table"
-                  width="1536"
-                  height="1024"
-                  loading="lazy"
-                  decoding="async"
-                >
+                <picture>
+                  <source
+                    srcset="assets/images/gallery/moments-worth-sharing.webp"
+                    type="image/webp"
+                  >
+                  <img
+                    src="assets/images/gallery/moments-worth-sharing.jpg"
+                    alt="Guests sharing beautifully presented Afghan dishes around a warm table"
+                    width="1536"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </picture>
               </div>
               <figcaption class="experience-caption">Moments Worth Sharing</figcaption>
             </figure>
 
             <figure class="experience-item">
               <div class="experience-visual">
-                <img
-                  src="assets/images/gallery/afghan-tradition-refined.jpg"
-                  alt="Traditional Afghan cuisine presented with refined tableware and styling"
-                  width="1536"
-                  height="1024"
-                  loading="lazy"
-                  decoding="async"
-                >
+                <picture>
+                  <source
+                    srcset="assets/images/gallery/afghan-tradition-refined.webp"
+                    type="image/webp"
+                  >
+                  <img
+                    src="assets/images/gallery/afghan-tradition-refined.jpg"
+                    alt="Traditional Afghan cuisine presented with refined tableware and styling"
+                    width="1536"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </picture>
               </div>
               <figcaption class="experience-caption">Afghan Tradition, Refined</figcaption>
             </figure>
@@ -525,15 +611,18 @@
           <div class="story-grid">
             <div class="story-visual">
               <div class="story-frame">
-                <img
-                  class="story-portrait"
-                  src="assets/images/story/namak-story.jpg"
-                  alt="Story-inspired portrait scene representing the craft and hospitality behind Namak Restaurant"
-                  width="1024"
-                  height="1536"
-                  loading="lazy"
-                  decoding="async"
-                >
+                <picture>
+                  <source srcset="assets/images/story/namak-story.webp" type="image/webp">
+                  <img
+                    class="story-portrait"
+                    src="assets/images/story/namak-story.jpg"
+                    alt="Story-inspired portrait scene representing the craft and hospitality behind Namak Restaurant"
+                    width="1024"
+                    height="1536"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </picture>
               </div>
               <div class="story-accent"></div>
             </div>
