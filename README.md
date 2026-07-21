@@ -62,10 +62,16 @@ namak-restaurant/
     ├── js/
     │   └── script.js
     └── images/
+        ├── about/
+        ├── dishes/
+        ├── gallery/
+        ├── hero/
+        ├── social/
+        ├── story/
         └── favicon.svg
 ```
 
-The `images` directory currently contains the site favicon and will contain final optimized production imagery later.
+The `images` directory contains the site favicon and optimized JPG and WebP image assets used throughout the website.
 
 ## Running Locally
 
