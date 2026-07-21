@@ -1028,3 +1028,106 @@ a:focus-visible {
     min-height: 18rem;
   }
 }
+
+/* ========================================
+   Restaurant Menu
+======================================== */
+
+.menu {
+  border-top: 1px solid color-mix(in srgb, var(--color-gold) 10%, transparent);
+  background-color: var(--color-secondary-dark);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(2.5rem, 7vw, 6rem);
+}
+
+.menu-item {
+  border-top: 1px solid color-mix(in srgb, var(--color-text-muted) 18%, transparent);
+  padding-block: 2rem;
+}
+
+.menu-category {
+  display: block;
+  margin-bottom: 0.65rem;
+  color: var(--color-gold);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.menu-item-header {
+  display: grid;
+  grid-template-columns: auto minmax(1.5rem, 1fr) auto;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.menu-item-header::after {
+  grid-column: 2;
+  grid-row: 1;
+  height: 1px;
+  background-image: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--color-gold) 45%, transparent) 1px,
+    transparent 1.5px
+  );
+  background-position: center;
+  background-size: 6px 2px;
+  content: "";
+}
+
+.menu-name {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  letter-spacing: 0.01em;
+}
+
+.menu-price {
+  grid-column: 3;
+  grid-row: 1;
+  color: var(--color-gold);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.menu-description {
+  max-width: 34rem;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.menu-action {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .menu-item-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .menu-item-header::after {
+    display: none;
+  }
+
+  .menu-name {
+    grid-column: 1;
+  }
+
+  .menu-price {
+    grid-column: 2;
+  }
+}
