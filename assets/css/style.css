@@ -167,6 +167,10 @@ a:focus-visible {
   color: var(--color-gold);
 }
 
+.mobile-reservation-item {
+  display: none;
+}
+
 .header-cta {
   flex-shrink: 0;
   border: 1px solid var(--color-gold);
@@ -255,6 +259,26 @@ a:focus-visible {
   .nav-list a {
     display: block;
     padding: 0.85rem 0.5rem;
+  }
+
+  .mobile-reservation-item {
+    display: list-item;
+  }
+
+  .nav-list .mobile-nav-cta {
+    margin-top: 0.5rem;
+    border: 1px solid var(--color-gold);
+    padding: 0.75rem 1rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .nav-list .mobile-nav-cta:hover,
+  .nav-list .mobile-nav-cta:focus-visible {
+    background-color: var(--color-gold);
+    color: var(--color-primary-dark);
   }
 
   .header-cta {
