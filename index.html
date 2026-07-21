@@ -530,7 +530,12 @@
                 </p>
               </header>
 
-              <form class="reservation-form" action="" method="post">
+              <form
+                class="reservation-form"
+                action=""
+                method="post"
+                aria-describedby="reservation-form-note"
+              >
                 <div class="form-grid">
                   <div class="form-group">
                     <label for="full-name">Full Name</label>
@@ -550,6 +555,7 @@
                       id="email-address"
                       name="email-address"
                       autocomplete="email"
+                      inputmode="email"
                       required
                     >
                   </div>
@@ -561,6 +567,7 @@
                       id="phone-number"
                       name="phone-number"
                       autocomplete="tel"
+                      inputmode="tel"
                       required
                     >
                   </div>
@@ -602,7 +609,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary">Request a Reservation</button>
-                <p class="form-note">
+                <p class="form-note" id="reservation-form-note">
                   Online reservation requests will be activated when the booking service is
                   connected.
                 </p>

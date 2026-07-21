@@ -64,7 +64,7 @@ html {
 
 body {
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
   background-color: var(--color-primary-dark);
   color: var(--color-text-light);
   font-family: Arial, Helvetica, sans-serif;
@@ -81,6 +81,8 @@ h5,
 h6 {
   color: var(--color-text-light);
   line-height: 1.2;
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 p {
@@ -168,7 +170,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: clamp(1rem, 2vw, 2rem);
   min-height: 5rem;
   padding-block: 0.75rem;
 }
@@ -190,7 +192,7 @@ a:focus-visible {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: clamp(1.25rem, 3vw, 2.5rem);
+  gap: clamp(1rem, 2.2vw, 2.5rem);
   margin-left: auto;
   list-style: none;
 }
@@ -234,10 +236,14 @@ a:focus-visible {
 .nav-toggle {
   display: none;
   width: 2.75rem;
+  min-width: 2.75rem;
   height: 2.75rem;
+  min-height: 2.75rem;
+  flex-shrink: 0;
   padding: 0.6rem;
   border: 1px solid var(--color-gold);
   color: var(--color-gold);
+  touch-action: manipulation;
 }
 
 .nav-toggle span {
@@ -283,6 +289,9 @@ a:focus-visible {
     right: 0;
     left: 0;
     display: none;
+    width: 100%;
+    max-height: calc(100svh - 4.5rem);
+    overflow-y: auto;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
@@ -291,6 +300,7 @@ a:focus-visible {
     border-bottom: 1px solid var(--color-secondary-dark);
     padding: 0.75rem 1rem;
     background-color: var(--color-primary-dark);
+    overscroll-behavior: contain;
   }
 
   .nav-list.is-open {
@@ -298,7 +308,9 @@ a:focus-visible {
   }
 
   .nav-list a {
-    display: block;
+    display: flex;
+    min-height: 3rem;
+    align-items: center;
     padding: 0.85rem 0.5rem;
   }
 
@@ -307,6 +319,7 @@ a:focus-visible {
   }
 
   .nav-list .mobile-nav-cta {
+    justify-content: center;
     margin-top: 0.5rem;
     border: 1px solid var(--color-gold);
     padding: 0.75rem 1rem;
@@ -380,7 +393,7 @@ a:focus-visible {
 
 .hero-title {
   max-width: 13ch;
-  font-size: clamp(2.75rem, 6vw, 5.75rem);
+  font-size: clamp(2.75rem, 5.5vw, 5.25rem);
   font-weight: 700;
   letter-spacing: -0.035em;
 }
@@ -404,12 +417,14 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   min-height: 3.25rem;
+  max-width: 100%;
   border: 1px solid transparent;
   padding: 0.8rem 1.5rem;
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 1.2;
+  overflow-wrap: anywhere;
   text-align: center;
   transition:
     background-color var(--transition),
@@ -624,7 +639,7 @@ a:focus-visible {
 
 @media (max-width: 520px) {
   .hero-title {
-    font-size: clamp(2.5rem, 13vw, 3.5rem);
+    font-size: clamp(2.35rem, 12vw, 3.25rem);
   }
 
   .hero-actions {
@@ -641,7 +656,7 @@ a:focus-visible {
   }
 
   .hero-visual {
-    min-height: 19rem;
+    min-height: clamp(17rem, 85vw, 19rem);
   }
 
   .hero-plate {
@@ -949,6 +964,7 @@ a:focus-visible {
   margin: 1.25rem auto 0;
   font-size: 1rem;
   line-height: 1.8;
+  text-wrap: pretty;
 }
 
 .categories-grid {
@@ -1477,9 +1493,9 @@ a:focus-visible {
   transform: translateX(0.25rem);
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .offers-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding-top: 0;
   }
 
@@ -1491,6 +1507,12 @@ a:focus-visible {
   .offer-card:nth-child(2):hover,
   .offer-card:nth-child(2):focus-within {
     transform: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .offers-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1875,13 +1897,19 @@ a:focus-visible {
   letter-spacing: 0.06em;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .testimonials-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .testimonial-card {
     min-height: 18rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1948,6 +1976,7 @@ a:focus-visible {
   background-color: var(--color-primary-dark);
   color: var(--color-text-light);
   color-scheme: dark;
+  font-size: 1rem;
   transition:
     border-color var(--transition),
     outline-color var(--transition);
@@ -2019,6 +2048,7 @@ a:focus-visible {
   color: var(--color-text-light);
   font-size: 0.9rem;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .contact-value-spaced {
@@ -2104,6 +2134,7 @@ a.contact-value:focus-visible {
   color: var(--color-text-light);
   font-size: 0.9rem;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .location-value a {
@@ -2350,5 +2381,55 @@ a.contact-value:focus-visible {
 
   .footer-bottom {
     flex-direction: column;
+  }
+}
+
+/* ========================================
+   Interaction and Motion Preferences
+======================================== */
+
+@media (pointer: coarse) {
+  .text-link,
+  .category-link,
+  .offer-link,
+  .footer-links a,
+  a.contact-value,
+  .location-value a {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus-visible,
+  .btn-secondary:hover,
+  .btn-secondary:focus-visible,
+  .category-card:hover,
+  .category-card:focus-within,
+  .signature-card:hover,
+  .signature-card:focus-within,
+  .offer-card,
+  .offer-card:hover,
+  .offer-card:focus-within,
+  .testimonial-card:hover,
+  .testimonial-card:focus-within,
+  .experience-item:hover .experience-visual {
+    transform: none;
   }
 }
