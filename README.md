@@ -4,10 +4,10 @@ Namak Restaurant is a premium responsive restaurant website inspired by Afghan h
 
 ## Live Website
 
-Planned GitHub Pages URL:  
-https://Totakhill.github.io/namak-restaurant/
+Live website:  
+https://totakhill.github.io/namak-restaurant/
 
-The website is designed for deployment using GitHub Pages. Deployment has not yet been verified.
+The website is deployed with GitHub Pages.
 
 ## Project Overview
 
@@ -72,13 +72,13 @@ No Node.js, npm, or build process is required because this is a static HTML, CSS
 
 ## GitHub Pages Deployment
 
-The website is designed to be published with these settings:
+Deployment is active and verified with these settings:
 
 - Branch: `main`
 - Folder: `/(root)`
 
-Expected project URL:  
-https://Totakhill.github.io/namak-restaurant/
+Live URL:  
+https://totakhill.github.io/namak-restaurant/
 
 ## Contact
 
@@ -92,6 +92,8 @@ https://wa.me/93765083224
 
 The main website structure and visual design are complete, and the confirmed mobile and WhatsApp contact number has been added. The reservation form remains a user-interface preview and is not connected to a live booking service.
 
+The website is currently live on GitHub Pages.
+
 Final production work still includes:
 
 - Verified final restaurant address
@@ -99,9 +101,8 @@ Final production work still includes:
 - Verified restaurant email address
 - Final photography and image optimization
 - Full responsive QA
-- SEO and social sharing metadata refinement
+- SEO and social sharing refinement where still applicable
 - Live reservation service integration
-- Final GitHub Pages deployment verification
 - Custom domain configuration if desired
 
 ## Learning Goals
